@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 
     double epsilon = 1e-6;
     int max_iter = 100000;
-    int n = 2500;
+    int n = 10;
 
 
     vector<vector<double>> A(n,vector<double>(n, 0.0));
