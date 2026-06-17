@@ -28,11 +28,14 @@ int main(int argc, char* argv[]) {
     int n = 1000;
 
 
-    vector<vector<double>> A(n,vector<double>(n, 0.0));
+    vector<vector<double>> A;
+    vector<double> b;
 
-    vector<double> b(n,0.0);
-
-    gerar_matriz(A, b, n);
+    if (rank == 0) {
+        A.resize(n, vector<double>(n, 0.0));
+        b.resize(n, 0.0);
+        gerar_matriz(A, b, n);
+    }
 
     vector<double> resultado_seq;
 
