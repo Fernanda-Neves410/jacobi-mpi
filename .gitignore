@@ -1,0 +1,18 @@
+# VS Code
+.vscode/
+
+# Executáveis
+*.exe
+*.out
+
+# Objetos
+*.o
+*.obj
+
+# Bibliotecas
+*.a
+*.so
+*.dll
+
+# Arquivos temporários
+*.tmp
