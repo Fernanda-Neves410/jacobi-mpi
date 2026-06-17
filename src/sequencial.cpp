@@ -42,9 +42,7 @@ vector<double> jacobi_sequencial( vector<vector<double>>& A, vector<double>& b,
 
         // Verifica convergência
         if (erro < epsilon) {
-            cout << "Convergiu em "
-                << k + 1
-                << " iteracoes.\n";
+            cout << "Convergiu em " << k + 1 << " iteracoes.\n";
 
             break;
         }

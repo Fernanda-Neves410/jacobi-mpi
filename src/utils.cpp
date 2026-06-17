@@ -6,11 +6,7 @@ using namespace std;
 
 
 // Gera uma matriz diagonal dominante
-void gerar_matriz(
-    vector<vector<double>>& A,
-    vector<double>& b,
-    int n
-) {
+void gerar_matriz(vector<vector<double>>& A, vector<double>& b, int n) {
 
     for (int i = 0; i < n; i++) {
 
@@ -34,29 +30,21 @@ void gerar_matriz(
 
 
 // Converte matriz 2D para vetor linear
-void converter_matriz_para_vetor(
-    vector<vector<double>>& A,
-    double* A_linear,
-    int n
-) {
+void converter_matriz_para_vetor(vector<vector<double>>& A, double* A_linear, int n) {
 
     for (int linha = 0; linha < n; linha++) {
 
         for (int coluna = 0; coluna < n; coluna++) {
 
-            A_linear[linha * n + coluna] =
-                A[linha][coluna];
+            A_linear[linha * n + coluna] = A[linha][coluna];
         }
     }
 }
 
 
 // Calcula diferença entre resultado sequencial e MPI
-double calcular_diferenca(
-    vector<double>& resultado_seq,
-    vector<double>& resultado_mpi,
-    int n
-) {
+double calcular_diferenca(vector<double>& resultado_seq, vector<double>& resultado_mpi, 
+                            int n) {
 
     double diferenca = 0.0;
 

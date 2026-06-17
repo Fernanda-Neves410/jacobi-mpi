@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
 
     double epsilon = 1e-6;
     int max_iter = 100000;
-    int n = 10;
+    int n = 1000;
 
 
     vector<vector<double>> A(n,vector<double>(n, 0.0));
@@ -50,15 +50,9 @@ int main(int argc, char* argv[]) {
 
         tempo_seq = tempo_gasto_seq.count();
 
-        cout
-            << "Numero de processos: "
-            << num_processos
-            << "\n\n";
+        cout << "Numero de processos: " << num_processos << "\n\n";
 
-        cout
-            << "Tempo Sequencial: "
-            << tempo_seq
-            << " s\n\n";
+        cout << "Tempo Sequencial: " << tempo_seq << " s\n\n";
     }
 
     MPI_Barrier(
@@ -77,33 +71,19 @@ int main(int argc, char* argv[]) {
 
         double tempo_mpi = tempo_gasto_mpi.count();
 
-        cout
-            << "Tempo MPI: "
-            << tempo_mpi
-            << " s\n\n";
+        cout << "Tempo MPI: " << tempo_mpi << " s\n\n";
 
-        double speedup =
-            tempo_seq / tempo_mpi;
+        double speedup = tempo_seq / tempo_mpi;
 
-        double eficiencia =
-            speedup / num_processos;
+        double eficiencia = speedup / num_processos;
 
-        cout
-            << "Speedup: "
-            << speedup
-            << endl;
+        cout << "Speedup: " << speedup << endl;
 
-        cout
-            << "Eficiencia: "
-            << eficiencia
-            << endl;
+        cout << "Eficiencia: " << eficiencia << endl;
 
         double diferenca = calcular_diferenca(resultado_seq,resultado_mpi,n);
 
-        cout
-            << "Diferenca Seq vs MPI: "
-            << diferenca
-            << endl;
+        cout << "Diferenca Seq vs MPI: " << diferenca << endl;
     }
 
     MPI_Finalize();
