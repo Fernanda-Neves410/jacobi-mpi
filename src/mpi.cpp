@@ -287,10 +287,15 @@ vector<double> executar_jacobi_mpi(
 
 
 
-        double erro =
-            sqrt(erro_global)
-            /
-            sqrt(norma_global);
+        double erro = 0.0;
+
+        if(norma_global > 0.0)
+        {
+            erro =
+                sqrt(erro_global)
+                /
+                sqrt(norma_global);
+        }
 
 
 

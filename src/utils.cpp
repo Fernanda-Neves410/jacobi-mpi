@@ -62,10 +62,7 @@ double calcular_diferenca(
 
     for (int i = 0; i < n; i++) {
 
-        diferenca += abs(
-            resultado_seq[i]
-            - resultado_mpi[i]
-        );
+        diferenca += fabs(resultado_seq[i] - resultado_mpi[i]);
     }
 
     return diferenca;

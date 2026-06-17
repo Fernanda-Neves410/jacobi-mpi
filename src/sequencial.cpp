@@ -7,7 +7,7 @@ using namespace std;
 vector<double> jacobi_sequencial( vector<vector<double>>& A, vector<double>& b,
                                 int max_iter, double epsilon) {
                                     
-    int n = 10;
+    int n = A.size();
 
     vector<double> x_old(n, 0.0);
     vector<double> x_new(n, 0.0);
