@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
 
     auto inicio_mpi = chrono::high_resolution_clock::now();
 
-    vector<double> resultado_mpi = executar_jacobi_mpi(A,b,max_iter,epsilon);
+    vector<double> resultado_mpi = executar_jacobi_mpi(A,b,n,epsilon,max_iter);
 
     auto fim_mpi = chrono::high_resolution_clock::now();
 
